@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Raleway:wght@400;600&display=swap");
+/* 폰트 import , google font 에서 필요한 폰트만 css import 한 후, css 복붙 형식 붙여넣기 */
+@import "reset.css";
+/* html 은 자동적으로 background 나 양식 스타일 폰트 사이즈&스타일 등을 알아서 만드는 부분이 있는데 그런것들 초기화 하는 스크립트 */
+@import "status-bar.css";
+
+body {
+  font-family: "Monomaniac One", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  /* 또는 display: flex 말그대로 텍스트형식을 제외한 엘리먼트 자체를 인라인 가로형태로 일렬로 정렬하는 기능 */
+  /* text-align:center : 텍스트형식의 엘리먼트를 가운데로 정렬하는 형태 ex) html(p , h1~h7) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.welcome-header__title {
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+  font-weight: 400;
+}
