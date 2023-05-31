@@ -32,11 +32,19 @@
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email of phone number" />
-      <input type="password" placeholder="password" />
+    <!-- method 에서 get 또는 post 가 있지만, post 를 위해서는 백엔드 서버가 있어야 함 / get 은 url 에 보임 -->
+    <!-- action 은 데이터를 어디로 보낼건지 설정하는 attribute -->
+    <form action="friends.html" method="get" id="login-form">
+      <input
+        required
+        name="username"
+        required
+        type="text"
+        placeholder="Email or phone number"
+      />
+      <input required name="password" type="password" placeholder="password" />
       <input type="submit" value="Log in" />
-      <input type="submit" value="Sign Up" />
+      <!-- <input type="submit" value="Sign Up" /> -->
       <a href="#">Find Kokoa Account or Password</a>
     </form>
 

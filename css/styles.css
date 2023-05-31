@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Raleway:wght@400;600&display=swap");
 /* 폰트 import , google font 에서 필요한 폰트만 css import 한 후, css 복붙 형식 붙여넣기 */
+
 @import "reset.css";
 /* html 은 자동적으로 background 나 양식 스타일 폰트 사이즈&스타일 등을 알아서 만드는 부분이 있는데 그런것들 초기화 하는 스크립트 */
-@import "status-bar.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+
+/* Screens */
+@import "screens/login.css";
 
 body {
   font-family: "Monomaniac One", sans-serif;
@@ -29,4 +36,65 @@ body {
   width: 60%;
   opacity: 0.7;
   font-weight: 400;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+/* class 를 별도로 설정해주지 않았기에, login-form 의 input 에만 적용하는 방식으로 스크립트 진행 */
+/* input 전부다 focus 되었을때 외곽선을 없애기 위해서 "reset.css" 파일에 outline: none 추가 */
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* 만약 class 로 위&아래 코드를 적는다면? */
+/* 
+.login-form__input { email or phone number 부분
+
+}
+
+.login-form___btn { log in button 부분
+
+}
+
+.login-form__a { 아래 링크 부분
+
+}
+ */
+
+/* [type="submit"] -> attribute selector */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+/* :not() -> ~한 id 등이 아닌 경우들에 적용 */
+
+/* :: 수도 셀렉터스 */
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+  /* "variables.css" 파일의 root 에 yellow 에 대한 정의 내림, 반드시 import 해야 작동함 */
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 10px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
 }
