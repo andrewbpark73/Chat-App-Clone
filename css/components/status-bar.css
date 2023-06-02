@@ -1,6 +1,10 @@
 .status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
+
   /* justify-content : 정렬 기능    -> 다만 이렇게 되면 정확히 가운데에 위치 하지 않는 경우 발생하여 아래와 같이 css hack 방식 존재 */
   padding: 5px 3px;
 }

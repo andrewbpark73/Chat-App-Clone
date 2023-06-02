@@ -1,0 +1,43 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  /* 상부에 width 를 100프로로 주면, css 는 box 사이즈를 확장해서 계산해주는데 위의 명령어는 box 사이즈를 늘리지 말라고 하는 명령어 */
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  /* 하부 nav__notification 부분이 body 를 중심으로 상대 위치로 지정되어 오른쪽 맨 끝으로 가는것을 방지하기 위해 position: relative 써줘야함.. 포지션 앱솔루트는 가장 가까운 상대 좌표를 가져옴. */
+  color: #2e363e;
+}
+
+.nav__notification__msg {
+  background-color: tomato;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__notification__set {
+  color: tomato;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+}

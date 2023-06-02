@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Raleway:wght@400;600&display=swap");
 /* 폰트 import , google font 에서 필요한 폰트만 css import 한 후, css 복붙 형식 붙여넣기 */
 
-@import "reset.css";
 /* html 은 자동적으로 background 나 양식 스타일 폰트 사이즈&스타일 등을 알아서 만드는 부분이 있는데 그런것들 초기화 하는 스크립트 */
+@import "reset.css";
 @import "variables.css";
 
 /* Components */
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
 
 /* Screens */
 @import "screens/login.css";
