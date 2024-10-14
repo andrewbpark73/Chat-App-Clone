@@ -1,3 +1,3 @@
-# Kokoa Clone 2023
+# Chat App Clone 2023
 
 HTML & CSS
